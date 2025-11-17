@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Nyumba Food Concept</title>
+    <meta name="description" content="Galeria do Nyumba Food Concept - Veja os nossos pratos exclusivos, a esplanada acolhedora, cocktails artesanais e a cozinha do nosso quiosque.">
+    <meta name="keywords" content="galeria restaurante Maputo, pratos chef Nyumba, esplanada, cocktails, cozinha quiosque">
+    <meta name="author" content="Nyumba Food Concept">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Galeria | Nyumba Food Concept">
+    <meta property="og:description" content="Descubra a atmosfera única do Nyumba Food Concept através da nossa galeria de imagens.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nyumbafoodconcept.com/galeria.html">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#ff7c00">
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <h1 class="page-title" id="gallery-title">Venha conhecer-nos</h1>
+        
+        <div class="gallery-grid">
+            <!-- Pratos do Chefe -->
+            <div class="gallery-item" data-category="pratos" tabindex="0" role="button" aria-label="Ver Pratos do Chefe">
+                <img src="images/pc1.jpg" alt="Prato do Chef Nyumba - Criação exclusiva com ingredientes frescos" loading="lazy">
+                <div class="image-caption">
+                    <strong id="item-pratos-title">Pratos do Chefe</strong>
+                    <span id="item-pratos-desc">As nossas criações exclusivas e destaques gastronómicos.</span>
+                </div>
+            </div>
+
+            <!-- Esplanada -->
+            <div class="gallery-item" data-category="esplanada" tabindex="0" role="button" aria-label="Ver Nossa Esplanada">
+                <img src="images/es1.jpg" alt="Esplanada do Nyumba Food Concept - Ambiente acolhedor no Parque dos Continuadores" loading="lazy">
+                <div class="image-caption">
+                    <strong id="item-esplanada-title">A Nossa Esplanada</strong>
+                    <span id="item-esplanada-desc">O ambiente acolhedor e tranquilo no coração do parque.</span>
+                </div>
+            </div>
+
+            <!-- Cocktails -->
+            <div class="gallery-item" data-category="cocktails" tabindex="0" role="button" aria-label="Ver Cocktails Artesanais">
+                <img src="images/ck1.jpg" alt="Cocktails artesanais Nyumba - Bebidas refrescantes com toque especial" loading="lazy">
+                <div class="image-caption">
+                    <strong id="item-cocktails-title">Cocktails Artesanais</strong>
+                    <span id="item-cocktails-desc">Bebidas refrescantes e cheias de sabor para o seu final de tarde.</span>
+                </div>
+            </div>
+
+            <!-- Cozinha -->
+            <div class="gallery-item" data-category="cozinha" tabindex="0" role="button" aria-label="Ver Cozinha do Quiosque">
+                <img src="images/cz1.jpg" alt="Cozinha do quiosque Nyumba - Área de preparação higiénica e organizada" loading="lazy">
+                <div class="image-caption">
+                    <strong id="item-cozinha-title">Cozinha do Quiosque</strong>
+                    <span id="item-cozinha-desc">Onde a magia acontece: a preparação dos nossos pratos.</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal da Galeria -->
+    <div id="gallery-modal" role="dialog" aria-labelledby="gallery-modal-caption" aria-hidden="true">
+        <div id="gallery-modal-content">
+            <button class="modal-nav-button" id="gallery-modal-prev" aria-label="Imagem anterior">‹</button>
+            <img id="enlarged-gallery-image" src="" alt="">
+            <button class="modal-nav-button" id="gallery-modal-next" aria-label="Próxima imagem">›</button>
+        </div>
+        <div id="gallery-modal-caption"></div>
+        <div id="gallery-modal-close-hint">Prima ESC ou clique na área escura para fechar.</div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/dateTime.js"></script>
+    <script src="js/gallery.js"></script>
+    
+    <script>
+        // Carregar header e footer
+        Promise.all([
+            loadInclude('header-placeholder', 'includes/header.html'),
+            loadInclude('footer-placeholder', 'includes/footer.html')
+        ]).then(() => {
+            initializeComponents();
+        }).catch(error => {
+            console.error('Erro ao carregar includes:', error);
+        });
+    </script>
+</body>
+</html>

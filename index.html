@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nyumba Food Concept | Principal</title>
+	<meta name="description" content="Nyumba Food Concept - Restaurante em Maputo onde a tradição moçambicana encontra a inovação gastronómica. Experiência única no Parque dos Continuadores.">
+	<meta name="keywords" content="restaurante Maputo, comida moçambicana, gastronomia, Parque dos Continuadores, Nyumba Food Concept">
+	<meta name="author" content="Nyumba Food Concept">
+	
+	<!-- Open Graph Tags -->
+	<meta property="og:title" content="Nyumba Food Concept | Onde a Tradição Encontra a Inovação">
+	<meta property="og:description" content="Restaurante único em Maputo com culinária moçambicana e internacional. Venha experimentar a nossa esplanada e pratos exclusivos.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://nyumbafoodconcept.com">
+	
+	<!-- PWA -->
+	<link rel="manifest" href="site.webmanifest">
+	<meta name="theme-color" content="#ff7c00">
+	
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	
+	<!-- CSS Global -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2NPGCF8XV8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-2NPGCF8XV8');
+	</script>
+</head>
+<body id="home-page">
+	<!-- Header Incluído -->
+	<div id="header-placeholder"></div>
+
+	<main>
+		<h1 id="main-welcome">Nyumba Food Concept</h1>
+		<h2 id="main-subtitle">O Sabor de Maputo, Elevado com Atitude</h2>
+		
+		<p id="main-p1">
+			Há espaços onde se come. E depois há o Nyumba Food – Concept, onde cada prato parece ter sido criado para impressionar. Instalado no ambiente calmo e encantador do Parque dos Continuadores, este quiosque transforma cada refeição numa viagem bem guiada — com paragens seguras na tradição, mas sempre com rota ousada rumo ao inesperado.
+		</p>
+		
+		<p id="main-p2">
+			O Menu é uma celebração de fronteiras gastronómicas inteligentemente atravessadas: a cozinha moçambicana no seu esplendor, a herança portuguesa tratada com respeito e criatividade, e ainda sabores de outras latitudes — desde hambúrgueres cheios de carácter a composições que surpreendem pela precisão e pela alma. Nada aqui é feito “porque sim”; tudo tem intenção, técnica e aquele toque requintado que distingue quem vive verdadeiramente para cozinhar.
+		</p>
+
+		<p id="main-p3">
+			Na esplanada ao almoço, num jantar descontraído ou num cocktail ao final do dia, o Nyumba oferece sempre aquela vibração boa que faz o visitante sentir que está exactamente no lugar certo. E os Pratos do Chefe? De execução impecável, mostram até onde esta cozinha pode ir quando decide impressionar.
+		</p>
+
+		<p id="main-p4">
+			Em Maputo, poucos lugares tratam o sabor com tanta atitude e cuidado. O Nyumba está aberto todos os dias — e cada visita deixa vontade de voltar.
+		</p>
+
+	</main>
+
+	<!-- Footer Incluído -->
+	<div id="footer-placeholder"></div>
+
+	<!-- Scripts no final do body -->
+	<script src="js/utils.js"></script>
+	<script src="js/lang.js"></script>
+	<script src="js/dateTime.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/gallery.js"></script>
+	
+	<script>
+		// Carregar header e footer de forma assíncrona
+		Promise.all([
+			loadInclude('header-placeholder', 'includes/header.html'),
+			loadInclude('footer-placeholder', 'includes/footer.html')
+		]).then(() => {
+			initializeComponents();
+		}).catch(error => {
+			console.error('Erro ao carregar includes:', error);
+		});
+	</script>
+</body>
+</html>

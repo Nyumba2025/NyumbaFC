@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos | Nyumba Food Concept</title>
+    <meta name="description" content="Contacte o Nyumba Food Concept - Telefone, WhatsApp, email e redes sociais. Localização no Parque dos Continuadores, Maputo.">
+    <meta name="keywords" content="contacto restaurante Maputo, telefone Nyumba, WhatsApp, email, localização, Parque dos Continuadores">
+    <meta name="author" content="Nyumba Food Concept">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contactos | Nyumba Food Concept">
+    <meta property="og:description" content="Entre em contacto connosco para reservas e informações. Estamos no Parque dos Continuadores, Maputo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nyumbafoodconcept.com/contactos.html">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#ff7c00">
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <h1 class="page-title" id="contact-title">Fale Connosco</h1>
+        <h2 id="contact-subtitle">Estamos ansiosos por recebê-lo e responder às suas questões.</h2>
+        
+        <div class="contact-grid">
+            <!-- Telefone/WhatsApp -->
+            <div class="contact-item">
+                <i>📞</i>
+                <h3 id="item-phone-title">Telefone e WhatsApp</h3>
+                <p id="item-phone-desc">Ligue-nos diretamente ou envie uma mensagem instantânea.</p>
+                <a href="tel:+258846695390" class="contact-link primary" aria-label="Ligar para Nyumba Food Concept">
+                    +258 846 695 390
+                </a>
+                <a href="https://wa.me/258846695390" class="contact-link" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
+                    WhatsApp: +258 846 695 390
+                </a>
+            </div>
+
+            <!-- E-mail -->
+            <div class="contact-item">
+                <i>✉️</i>
+                <h3 id="item-email-title">E-mail</h3>
+                <p id="item-email-desc">Envie-nos um e-mail para pedidos de reserva ou informações gerais.</p>
+                <a href="mailto:nyumba.maputo@gmail.com" class="contact-link primary" aria-label="Enviar email para Nyumba Food Concept">
+                    nyumba.maputo@gmail.com
+                </a>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="contact-item">
+                <i>📱</i>
+                <h3 id="item-instagram-title">Redes Sociais</h3>
+                <p id="item-instagram-desc">Siga-nos para ver as novidades e os pratos do dia.</p>
+                <a href="https://www.instagram.com/nyumbafoodconcept" class="contact-link primary" target="_blank" rel="noopener" aria-label="Seguir Nyumba Food Concept no Instagram">
+                    @nyumbafoodconcept
+                </a>
+                <a href="https://www.facebook.com/nyumbafoodconcept" class="contact-link" target="_blank" rel="noopener" aria-label="Seguir Nyumba Food Concept no Facebook">
+                    Facebook
+                </a>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div id="map-container">
+            <iframe 
+                id="map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1793.4858666683806!2d32.59189103825882!3d-25.968967382912982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69bfe2dccc6a7%3A0xe72f04de0d760ff5!2sNYUMBA%20Food%20Concept!5e0!3m2!1spt-PT!2smz!4v1763327382643!5m2!1spt-PT!2smz"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização do Nyumba Food Concept no Parque dos Continuadores, Maputo">
+            </iframe>
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/dateTime.js"></script>
+    
+    <script>
+        // Carregar header e footer
+        Promise.all([
+            loadInclude('header-placeholder', 'includes/header.html'),
+            loadInclude('footer-placeholder', 'includes/footer.html')
+        ]).then(() => {
+            initializeComponents();
+        }).catch(error => {
+            console.error('Erro ao carregar includes:', error);
+        });
+    </script>
+</body>
+</html>
