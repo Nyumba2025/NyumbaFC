@@ -1,0 +1,61 @@
+<!-- includes/footer.html -->
+<footer style="
+    background: #262019; /* Fundo sólido para um look mais limpo */
+    color: #fafafa;
+    padding: 3rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 3px solid var(--primary-orange);
+">
+    <div style="
+        max-width: 1100px; 
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    ">
+        <!-- Secção de Identidade -->
+        <div style="text-align: center; align-self: center;">
+            <h3 id="footer-title" style="color: var(--primary-orange); margin-bottom: 0.5rem; font-size: 1.8em;">Nyumba Food Concept</h3>
+            <p id="footer-slogan" style="font-size: 1.1em; color: #ccc;">Onde a tradição encontra a inovação na gastronomia moçambicana.</p>
+        </div>
+
+        <!-- Grelha de Informações -->
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            width: 100%;
+        ">
+            <!-- Coluna do Tempo -->
+            <div class="footer-col" style="text-align: center;">
+                <h4 id="footer-weather-title" style="color: var(--primary-orange); margin-bottom: 1rem; font-size: 1.2em;">Tempo em Maputo</h4>
+                <div style="border-radius: 8px; overflow: hidden; max-width: 220px; margin: 0 auto;">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/n25d8232d49/maputo-city/" data-label_1="MAPUTO CITY" data-label_2="WEATHER" data-font="Roboto Slab" data-icons="Climacons Animated" data-mode="Current" data-theme="clear" >MAPUTO CITY WEATHER</a>
+                </div>
+            </div>
+
+            <!-- Coluna da Morada -->
+            <div class="footer-col" style="text-align: center;">
+                <h4 id="footer-location-title" style="color: var(--primary-orange); margin-bottom: 1rem; font-size: 1.2em;">Onde Estamos</h4>
+                <p class="footer-text" style="margin: 0; font-size: 1em; line-height: 1.5;">
+                    Parque dos Continuadores<br>
+                    Maputo, Moçambique
+                </p>
+            </div>
+            
+            <!-- Coluna do Horário -->
+            <div class="footer-col" style="text-align: center;">
+                <h4 id="footer-hours-title" style="color: var(--primary-orange); margin-bottom: 1rem; font-size: 1.2em;">Horário</h4>
+                <p id="footer-hours-days" class="footer-text" style="margin: 0; font-size: 1em;">Segunda a Domingo: 10:00 - 22:00</p>
+                <p id="footer-hours-note" class="footer-text" style="margin-top: 0.5rem; font-size: 0.9em; color: #ccc;">
+                    Aberto todos os dias
+                </p>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div style="width: 100%; border-top: 1px solid #444; padding-top: 1.5rem; text-align: right;">
+            <p id="footer-copyright" style="margin: 0; font-size: 0.9em; color: #ccc;">&copy; 2025 José Freire. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
