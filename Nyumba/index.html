@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NPGCF8XV8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2NPGCF8XV8');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nyumba Food Concept | Principal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: #fffbe6;
+            color: #262019;
+        }
+
+        /* ---------- Header com imagem friso1 ---------- */
+        header {
+            background: url("images/friso1.png") center center / cover no-repeat;
+            height: 160px;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ---------- Logótipo Circular ---------- */
+        #logo-fixed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 160px;
+            width: 160px;
+            object-fit: cover;
+            z-index: 20;
+            margin-left: 10px;
+            border-radius: 50%;
+            border: 3px solid #ff7c00;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ---------- Navegação com Botões ---------- */
+        nav {
+            margin: 0.5em 0 1em 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.15em;
+            font-weight: 700;
+            padding: 12px 25px;
+            background: #ff7c00;
+            border-radius: 25px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(255, 124, 0, 0.4);
+            transition: all 0.3s ease;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background: #ffa64d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(255, 124, 0, 0.6);
+        }
+
+        /* --- Esconder link da página atual --- */
+        nav a.current-page {
+            display: none;
+        }
+
+        .lang-selector {
+            margin-bottom: 0.8em;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .lang-selector button {
+            background: #000000;
+            border: none;
+            border-radius: 6px;
+            margin: 0 0.25em;
+            padding: 0.5em 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            color: #ffffff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            transition: background 0.25s, transform 0.15s;
+        }
+
+        .lang-selector button:hover {
+            background: #222;
+            transform: scale(1.05);
+        }
+
+        #date-time {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+            color: #fffdf5;
+            font-size: 0.95em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
+            font-weight: 500;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 4px 8px;
+            border-radius: 15px;
+        }
+
+        /* ---------- Main section com overlay neutro ---------- */
+        main {
+            position: relative;
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 3em 2em;
+            text-align: center;
+            background: url("images/background2.png") center center / cover no-repeat;
+            min-height: 600px;
+            border-radius: 18px;
+            box-shadow: 0 0 40px rgba(28, 60, 25, 0.15);
+            z-index: 1;
+            animation: fadeInSmooth 1.6s ease-in-out;
+        }
+
+        main::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: rgba(30, 30, 30, 0.55);
+            pointer-events: none;
+            border-radius: 18px;
+        }
+
+        main>* {
+            position: relative;
+            z-index: 1;
+            color: #fafafa;
+            text-shadow: 0 2px 6px #000;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #89ff89;
+            margin-bottom: 0.2em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #ff7c00;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 1.5em;
+            color: #fafafa;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff7c00;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 1em;
+            margin-right: 15px;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 15px rgba(255, 124, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #ffa64d;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- Fade‑in ---------- */
+        @keyframes fadeInSmooth {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---------- Responsividade ---------- */
+        @media (max-width: 900px) {
+            header {
+                height: 130px;
+            }
+
+            #logo-fixed {
+                height: 130px;
+                width: 130px;
+            }
+
+            nav a {
+                padding: 10px 20px;
+                font-size: 1em;
+                min-width: 110px;
+            }
+
+            main {
+                margin: 1em auto;
+                padding: 1.5em;
+                min-height: 500px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .cta-button {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            main {
+                padding: 1em;
+                margin: 0.5em;
+                min-height: 400px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            header {
+                height: auto;
+                min-height: 110px;
+                padding: 10px 0;
+            }
+
+            #logo-fixed {
+                position: relative;
+                height: 80px;
+                width: 80px;
+                top: auto;
+                left: auto;
+                margin: 0 auto 5px auto;
+                display: block;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin: 0.5em 0;
+            }
+
+            nav a {
+                display: block;
+                width: 200px;
+                text-align: center;
+                margin: 0;
+                font-size: 1em;
+                padding: 12px 0;
+            }
+
+            .lang-selector {
+                flex-direction: row;
+                gap: 10px;
+                margin-bottom: 0.5em;
+            }
+
+            .lang-selector button {
+                padding: 6px 15px;
+                font-size: 0.9em;
+            }
+
+            #date-time {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin: 5px auto;
+                text-align: center;
+                width: fit-content;
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 8px 0;
+            }
+
+            #logo-fixed {
+                height: 70px;
+                width: 70px;
+            }
+
+            nav a {
+                width: 180px;
+                font-size: 0.95em;
+                padding: 10px 0;
+            }
+
+            .lang-selector {
+                gap: 8px;
+            }
+
+            .lang-selector button {
+                padding: 5px 12px;
+                font-size: 0.85em;
+            }
+
+            #date-time {
+                font-size: 0.75em;
+                padding: 2px 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo-nyumba.png" alt="Logótipo Nyumba Food Concept" id="logo-fixed"
+            onerror="this.onerror=null; this.src='https://placehold.co/160x160/4A2D1E/FFFFFF?text=Logo+Falta';" />
+        <nav>
+            <!-- O link "Principal" está escondido porque é a página atual -->
+            <a href="index.html" id="nav-home" class="current-page">Principal</a>
+            <a href="galeria.html" id="nav-gallery">Galeria</a>
+            <a href="menu.html" id="nav-menu">Menu</a>
+            <a href="contactos.html" id="nav-contact">Contactos</a>
+        </nav>
+        <div class="lang-selector">
+            <button onclick="setLang('pt')">Português</button>
+            <button onclick="setLang('en')">English</button>
+        </div>
+        <div id="date-time"></div>
+    </header>
+
+    <main>
+        <h1 id="main-welcome">Bem-vindo ao Nyumba Food Concept</h1>
+        <h2 id="main-subtitle">Onde a Tradição Encontra a Inovação em Maputo</h2>
+
+        <p id="main-p1">
+            Nyumba, que significa "Casa" em Swahili, é mais do que um restaurante; é um espaço de encontro onde a
+            riqueza da culinária moçambicana se harmoniza com influências internacionais. Localizado no coração vibrante
+            do Parque dos Continuadores, oferecemos uma experiência gastronómica única, seja para um almoço descontraído
+            na nossa esplanada, um jantar especial ou um cocktail ao final do dia.
+        </p>
+        <p id="main-p2">
+            Explore o nosso menu e descubra os nossos Pratos do Chefe exclusivos, ou visite a nossa Galeria para ver a
+            atmosfera acolhedora que nos define. Estamos abertos todos os dias para recebê-lo.
+        </p>
+
+        <a href="menu.html" class="cta-button" id="cta-menu">Explorar o Menu</a>
+        <a href="galeria.html" class="cta-button" id="cta-gallery">Ver Galeria</a>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
+<div class="copyright">
+    <small><em>&copy; 2025 José Freire. Website design and development. All rights reserved.</em></small>
+</div>
