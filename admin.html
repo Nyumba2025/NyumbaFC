@@ -157,12 +157,23 @@
     </header>
 
     <div class="tabs">
-        <button class="tab-button active" onclick="openTab('gallery')">Galeria</button>
+        <button class="tab-button active" onclick="openTab('home')">Principal</button>
+        <button class="tab-button" onclick="openTab('gallery')">Galeria</button>
         <button class="tab-button" onclick="openTab('menu')">Menu</button>
     </div>
 
+    <!-- HOME TAB -->
+    <div id="home" class="tab-content active">
+        <h2>Editar Página Principal</h2>
+        <p>Aqui pode editar os textos da página inicial (Bem-vindo, Sobre, Botões).</p>
+        <div id="home-editor"></div>
+        <div class="actions">
+            <button class="btn-save" onclick="downloadHomeData()">Download home-data.js</button>
+        </div>
+    </div>
+
     <!-- GALLERY TAB -->
-    <div id="gallery" class="tab-content active">
+    <div id="gallery" class="tab-content">
         <h2>Editar Galeria</h2>
         <p>Aqui pode editar as legendas e os links das imagens da galeria.</p>
         <div id="gallery-editor"></div>
@@ -182,6 +193,7 @@
     </div>
 
     <!-- Load Data Files -->
+    <script src="js/home-data.js"></script>
     <script src="js/gallery-data.js"></script>
     <script src="js/menu-data.js"></script>
     <!-- Load Admin Logic -->

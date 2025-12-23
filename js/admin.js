@@ -3,9 +3,65 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    renderHomeEditor();
     renderGalleryEditor();
     renderMenuEditor();
 });
+
+// --- HOME EDITOR ---
+
+function renderHomeEditor() {
+    const container = document.getElementById('home-editor');
+    container.innerHTML = '';
+
+    // Field definitions
+    const fields = [
+        { key: 'mainWelcome', label: 'Título de Boas-vindas' },
+        { key: 'mainSubtitle', label: 'Subtítulo' },
+        { key: 'mainP1', label: 'Texto Principal (Parágrafo 1)', isTextArea: true },
+        { key: 'mainP2', label: 'Texto Secundário (Parágrafo 2)', isTextArea: true },
+        { key: 'ctaMenu', label: 'Botão Menu' },
+        { key: 'ctaGallery', label: 'Botão Galeria' }
+    ];
+
+    fields.forEach(field => {
+        const block = document.createElement('div');
+        block.className = 'item-block';
+
+        const valPT = homeLangData.pt[field.key] || '';
+        const valEN = homeLangData.en[field.key] || '';
+
+        block.innerHTML = `
+            <div class="item-header">${field.label}</div>
+            <div class="form-group">
+                <label>Português:</label>
+                ${field.isTextArea
+                ? `<textarea id="home-${field.key}-pt">${valPT}</textarea>`
+                : `<input type="text" id="home-${field.key}-pt" value="${valPT}">`}
+            </div>
+            <div class="form-group">
+                <label>Inglês:</label>
+                ${field.isTextArea
+                ? `<textarea id="home-${field.key}-en">${valEN}</textarea>`
+                : `<input type="text" id="home-${field.key}-en" value="${valEN}">`}
+            </div>
+        `;
+        container.appendChild(block);
+    });
+}
+
+function downloadHomeData() {
+    const fields = ['mainWelcome', 'mainSubtitle', 'mainP1', 'mainP2', 'ctaMenu', 'ctaGallery'];
+
+    fields.forEach(key => {
+        homeLangData.pt[key] = document.getElementById(`home-${key}-pt`).value;
+        homeLangData.en[key] = document.getElementById(`home-${key}-en`).value;
+    });
+
+    const content = `const homeLangData = ${JSON.stringify(homeLangData, null, 4)};`;
+    downloadFile('home-data.js', content);
+}
+
 
 // --- GALLERY EDITOR ---
 
